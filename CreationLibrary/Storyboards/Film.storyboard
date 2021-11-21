@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bSI-DI-NUU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -125,6 +125,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fww-ei-FKs"/>
+                    <connections>
+                        <outlet property="filmDescriptionTextView" destination="mGP-JK-ouq" id="cPs-1I-CT9"/>
+                        <outlet property="filmDurationLabel" destination="5ct-iF-rpA" id="4Ju-6C-et0"/>
+                        <outlet property="filmPosterImage" destination="nnf-xz-UQa" id="oTE-sb-xV0"/>
+                        <outlet property="filmYearLabel" destination="jqm-dv-3Gu" id="lci-gT-vgL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ix-hf-07J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

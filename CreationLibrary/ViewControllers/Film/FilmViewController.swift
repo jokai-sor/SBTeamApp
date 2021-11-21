@@ -12,10 +12,7 @@ class FilmViewController: UIViewController {
     @IBOutlet var filmPosterImage: UIImageView!
     @IBOutlet var filmDurationLabel: UILabel!
     @IBOutlet var filmYearLabel: UILabel!
-    @IBOutlet var filmDescriptionLabel: UILabel!
-    
-    
-    
+    @IBOutlet var filmDescriptionTextView: UITextView!
     
     var film: Film!
     
@@ -26,6 +23,6 @@ class FilmViewController: UIViewController {
         filmPosterImage.image = UIImage(named: film.image)
         filmDurationLabel.text = "Длительность фильма: \(film.duration)"
         filmYearLabel.text = "Год выхода: \(film.year)"
-        filmDescriptionLabel.text = "Описание:\n\(film.description)"
+        filmDescriptionTextView.text = "Описание:\n\(film.description)"
     }
 }
