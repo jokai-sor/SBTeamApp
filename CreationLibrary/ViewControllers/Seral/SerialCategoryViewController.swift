@@ -9,14 +9,12 @@ import UIKit
 
 class SerialCategoryViewController: UITableViewController {
     
-    var serialCategoryList: [SerialCategory] = []
+    var serialCategoryList = Serial.getCategoryList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Категории сериалов"
-        
-        serialCategoryList = Serial.getCategoryList()
     }
 
     // MARK: - Table view data source
