@@ -14,17 +14,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     // MARK: - Public Properties
-    var users: [User]!
     var delegate: RegistrationViewControllerDelegate!
-    
-    // MARK: - Private Properies
-    private var user: User!
-    
-    // MARK: - Ovveride Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     
     @IBAction func registrationButtonTapped() {
         checkTextFieldValue(usernameTextField, passwordTextField)
@@ -44,9 +34,9 @@ extension RegistrationViewController {
         guard let login = login.text, !login.isEmpty else { return false }
         guard let password = password.text, !password.isEmpty else { return false }
         
-        user = User(login: login, password: password)
+        let user = User(login: login, password: password)
         
-        if users.contains(user) {
+        if delegate.checkIsUserInList(user) {
             return false
         } else {
             delegate.updateUsersList(user)

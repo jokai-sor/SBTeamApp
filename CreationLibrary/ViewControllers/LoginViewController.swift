@@ -19,26 +19,18 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     // MARK: - Private Properties
-    var users = UserDataManager().users
+    private var users = UserDataManager().users
 
     // MARK: - Ovveride Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("viewDidLoad")
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loginTextField.text = ""
         passwordTextField.text = ""
-        print("viewWillAppear \(users)")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let registrationVC = segue.destination as? RegistrationViewController else { return }
-        registrationVC.users = users
         registrationVC.delegate = self
-        
     }
 
     // MARK: - IB Actions
@@ -104,6 +96,10 @@ extension LoginViewController {
 
 // MARK: - RegistrationViewControllerDelegate
 extension LoginViewController: RegistrationViewControllerDelegate {
+    func checkIsUserInList(_ user: User) -> Bool {
+        users.contains(user)
+    }
+    
     func updateUsersList(_ user: User) {
         users.append(user)
     }
