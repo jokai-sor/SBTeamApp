@@ -11,6 +11,7 @@ struct Artist {
     let musicGenre: MusicGenre
     let photo: String
     let description: String
+    let country: Country
     
     static func getListOfGenres () -> [MusicGenre] {
         var listOfMusicGenres: [MusicGenre] = []
@@ -42,3 +43,11 @@ enum MusicGenre: String, CaseIterable {
     
 }
 
+enum Country: String, CaseIterable {
+    
+    case usa = "USA"
+    case uk = "UK"
+    case australia = "Australia"
+    case canada = "Canada"
+    
+}
