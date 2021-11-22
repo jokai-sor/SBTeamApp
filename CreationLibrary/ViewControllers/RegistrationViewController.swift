@@ -35,7 +35,6 @@ class RegistrationViewController: UIViewController {
             showAlert(title: "Ошибка!", message: "В системе уже есть такой пользователь!")
         }
     }
-    
 }
 
 // MARK: - RegistrationViewController extension

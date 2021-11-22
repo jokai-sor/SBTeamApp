@@ -36,5 +36,7 @@ class GenresTableViewController: UITableViewController {
         let musicGenre = genreList[indexPath.row]
         artistsVC.genre = musicGenre
     }
-
+    @IBAction func logOutButtonPressed(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }

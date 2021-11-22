@@ -34,7 +34,13 @@
                             <outlet property="delegate" destination="R8o-OY-WMF" id="BDM-r1-t6K"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Музыкальные жанры" id="Ecp-aZ-fKW"/>
+                    <navigationItem key="navigationItem" title="Музыкальные жанры" id="Ecp-aZ-fKW">
+                        <barButtonItem key="rightBarButtonItem" title="Выход" id="sck-Hu-fIj">
+                            <connections>
+                                <action selector="logOutButtonPressed:" destination="R8o-OY-WMF" id="Iye-h3-w2W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIt-8J-YXG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

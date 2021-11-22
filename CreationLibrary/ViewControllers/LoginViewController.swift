@@ -9,6 +9,7 @@ import UIKit
 
 protocol RegistrationViewControllerDelegate {
     func updateUsersList(_ user: User)
+    func checkIsUserInList(_ user: User) -> Bool
 }
 
 class LoginViewController: UIViewController {

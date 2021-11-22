@@ -23,7 +23,6 @@ class FilmViewController: UIViewController {
         filmPosterImage.image = UIImage(named: film.image)
         filmDurationLabel.text = "Длительность фильма: \(film.duration)"
         filmYearLabel.text = "Год выхода: \(film.year)"
-        print(film.description)
         filmDescriptionLabel.text = "Описание:\n\(film.description)"
     }
 }

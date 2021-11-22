@@ -38,5 +38,9 @@ class FilmCategoryViewController: UITableViewController {
         let filmCategory = filmCategoryList[indexPath.row]
         filmListVC.chosenCategory = filmCategory
     }
+    
+    @IBAction func logOutButtonPressed(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }
 

@@ -34,7 +34,13 @@
                             <outlet property="delegate" destination="pGv-oL-dbj" id="FUm-Ur-kDg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Категории фильмов" id="zMM-Sy-pqS"/>
+                    <navigationItem key="navigationItem" title="Категории фильмов" id="zMM-Sy-pqS">
+                        <barButtonItem key="rightBarButtonItem" title="Выход" id="9Wo-7K-WO5">
+                            <connections>
+                                <action selector="logOutButtonPressed:" destination="pGv-oL-dbj" id="F7H-A2-0k0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmQ-zW-PFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,7 +107,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="p6x-yl-TQJ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="p6x-yl-TQJ">
                                         <rect key="frame" x="0.0" y="71" width="41.5" height="249"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>

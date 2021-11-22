@@ -19,6 +19,7 @@ class FilmListViewController: UITableViewController {
         filmList = Film.getFilms(with: chosenCategory)
     }
 
+
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         filmList.count
@@ -40,6 +41,4 @@ class FilmListViewController: UITableViewController {
         let film = filmList[indexPath.row]
         filmVC.film = film
     }
-    
-
 }
