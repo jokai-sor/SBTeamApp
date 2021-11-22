@@ -11,12 +11,6 @@ class SerialCategoryViewController: UITableViewController {
     
     var serialCategoryList = Serial.getCategoryList()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        title = "Категории сериалов"
-    }
-
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         serialCategoryList.count

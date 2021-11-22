@@ -13,8 +13,6 @@ class GenresTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "Жанры"
         genreList = Artist.getListOfGenres()
 
     }

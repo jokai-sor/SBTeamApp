@@ -14,7 +14,6 @@ class FilmCategoryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Категории фильмов"
         filmCategoryList = Film.getCategoryList()
     }
 

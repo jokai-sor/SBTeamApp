@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Film Category View Controller-->
+        <!--Категории фильмов-->
         <scene sceneID="VlU-ec-Vz1">
             <objects>
                 <tableViewController id="pGv-oL-dbj" customClass="FilmCategoryViewController" customModule="CreationLibrary" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                             <outlet property="delegate" destination="pGv-oL-dbj" id="FUm-Ur-kDg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zMM-Sy-pqS"/>
+                    <navigationItem key="navigationItem" title="Категории фильмов" id="zMM-Sy-pqS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmQ-zW-PFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,7 +87,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iTY-zy-ABn">
-                                <rect key="frame" x="16" y="477" width="382" height="369"/>
+                                <rect key="frame" x="16" y="477" width="382" height="320"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ct-iF-rpA">
                                         <rect key="frame" x="0.0" y="0.0" width="65.5" height="20.5"/>
@@ -101,8 +101,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6x-yl-TQJ">
-                                        <rect key="frame" x="0.0" y="71" width="41.5" height="298"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="p6x-yl-TQJ">
+                                        <rect key="frame" x="0.0" y="71" width="41.5" height="249"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -124,7 +124,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fww-ei-FKs"/>
                     <connections>
-                        <outlet property="filmDescriptionLabel" destination="p6x-yl-TQJ" id="cES-SG-9Bo"/>
+                        <outlet property="filmDescriptionLabel" destination="p6x-yl-TQJ" id="8z8-th-dBV"/>
                         <outlet property="filmDurationLabel" destination="5ct-iF-rpA" id="4Ju-6C-et0"/>
                         <outlet property="filmPosterImage" destination="nnf-xz-UQa" id="oTE-sb-xV0"/>
                         <outlet property="filmYearLabel" destination="jqm-dv-3Gu" id="lci-gT-vgL"/>
@@ -134,10 +134,12 @@
             </objects>
             <point key="canvasLocation" x="1631.8840579710147" y="71.651785714285708"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Фильмы-->
         <scene sceneID="8Wt-BA-EtA">
             <objects>
                 <navigationController id="bSI-DI-NUU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Фильмы" image="film" catalog="system" id="Sx8-1b-3hR"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wc7-sz-KV1">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -152,6 +154,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="film" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

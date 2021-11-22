@@ -33,6 +33,7 @@ class ArtistsTableViewController: UITableViewController {
         cell.imageOfArtist.layer.cornerRadius = cell.imageOfArtist.frame.size.height / 2
         cell.imageOfArtist.clipsToBounds = true
         cell.genreLabel.text = artist.musicGenre.rawValue
+        cell.countryLabel.text = artist.country.rawValue
         return cell
     }
     // MARK: - Navigation

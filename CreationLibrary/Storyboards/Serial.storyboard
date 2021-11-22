@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YdY-MO-Oel">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YdY-MO-Oel">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Serial Category View Controller-->
+        <!--Категории сериалов-->
         <scene sceneID="fKQ-GD-tzT">
             <objects>
                 <tableViewController id="kCs-Rg-vj8" customClass="SerialCategoryViewController" customModule="CreationLibrary" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                             <outlet property="delegate" destination="kCs-Rg-vj8" id="MAB-RY-dac"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Upl-uc-Ci9">
+                    <navigationItem key="navigationItem" title="Категории сериалов" id="Upl-uc-Ci9">
                         <barButtonItem key="rightBarButtonItem" title="Выход" id="b3V-xM-46h">
                             <connections>
                                 <action selector="logOutButtonTapped:" destination="kCs-Rg-vj8" id="hh0-WM-qF1"/>
@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sEg-6C-Oge">
-                                <rect key="frame" x="16" y="156" width="382" height="690"/>
+                                <rect key="frame" x="16" y="156" width="382" height="641"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5e5-mj-lNV">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="300"/>
@@ -96,7 +96,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bQV-oS-pkA">
-                                        <rect key="frame" x="0.0" y="310" width="382" height="380"/>
+                                        <rect key="frame" x="0.0" y="310" width="382" height="331"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sc-55-SkT">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="29"/>
@@ -111,7 +111,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XHT-PF-Cty">
-                                                <rect key="frame" x="0.0" y="78" width="382" height="302"/>
+                                                <rect key="frame" x="0.0" y="78" width="382" height="253"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -144,10 +144,12 @@
             </objects>
             <point key="canvasLocation" x="1811.594202898551" y="75.669642857142847"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Сериалы-->
         <scene sceneID="lna-6T-KoJ">
             <objects>
                 <navigationController id="YdY-MO-Oel" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Сериалы" image="film.fill" catalog="system" id="wv7-Zr-Ado"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hxL-gh-gTm">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -162,6 +164,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="film.fill" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
