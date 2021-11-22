@@ -86,7 +86,7 @@
                                     <constraint firstAttribute="width" secondItem="nnf-xz-UQa" secondAttribute="height" multiplier="240:301" id="RA7-lD-cpu"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qic-md-i1X">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iTY-zy-ABn">
                                 <rect key="frame" x="16" y="477" width="382" height="369"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ct-iF-rpA">
@@ -101,32 +101,30 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mGP-JK-ouq">
-                                        <rect key="frame" x="0.0" y="71" width="382" height="298"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6x-yl-TQJ">
+                                        <rect key="frame" x="0.0" y="71" width="41.5" height="298"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zaV-R2-Bwm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zaV-R2-Bwm" firstAttribute="trailing" secondItem="qic-md-i1X" secondAttribute="trailing" constant="16" id="4kd-EB-kmY"/>
-                            <constraint firstItem="qic-md-i1X" firstAttribute="top" secondItem="nnf-xz-UQa" secondAttribute="bottom" constant="20" id="SFk-Ii-CwL"/>
-                            <constraint firstItem="qic-md-i1X" firstAttribute="leading" secondItem="zaV-R2-Bwm" secondAttribute="leading" constant="16" id="W8E-ux-xLS"/>
+                            <constraint firstItem="zaV-R2-Bwm" firstAttribute="bottom" secondItem="iTY-zy-ABn" secondAttribute="bottom" constant="16" id="Fiz-Bl-7jH"/>
                             <constraint firstItem="nnf-xz-UQa" firstAttribute="centerX" secondItem="YCz-yr-leX" secondAttribute="centerX" id="Ydj-qX-PUt"/>
+                            <constraint firstItem="iTY-zy-ABn" firstAttribute="top" secondItem="nnf-xz-UQa" secondAttribute="bottom" constant="20" id="cHG-tq-joL"/>
                             <constraint firstItem="nnf-xz-UQa" firstAttribute="height" secondItem="YCz-yr-leX" secondAttribute="height" multiplier="0.335938" id="d0E-3H-YAc"/>
                             <constraint firstItem="nnf-xz-UQa" firstAttribute="top" secondItem="zaV-R2-Bwm" secondAttribute="top" constant="16" id="erF-Go-8n9"/>
-                            <constraint firstItem="zaV-R2-Bwm" firstAttribute="bottom" secondItem="qic-md-i1X" secondAttribute="bottom" constant="16" id="xUo-Ia-JTj"/>
+                            <constraint firstItem="iTY-zy-ABn" firstAttribute="leading" secondItem="zaV-R2-Bwm" secondAttribute="leading" constant="16" id="fcB-uT-t0p"/>
+                            <constraint firstItem="zaV-R2-Bwm" firstAttribute="trailing" secondItem="iTY-zy-ABn" secondAttribute="trailing" constant="16" id="iJm-qc-53l"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fww-ei-FKs"/>
                     <connections>
-                        <outlet property="filmDescriptionTextView" destination="mGP-JK-ouq" id="cPs-1I-CT9"/>
+                        <outlet property="filmDescriptionLabel" destination="p6x-yl-TQJ" id="cES-SG-9Bo"/>
                         <outlet property="filmDurationLabel" destination="5ct-iF-rpA" id="4Ju-6C-et0"/>
                         <outlet property="filmPosterImage" destination="nnf-xz-UQa" id="oTE-sb-xV0"/>
                         <outlet property="filmYearLabel" destination="jqm-dv-3Gu" id="lci-gT-vgL"/>
@@ -154,9 +152,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
